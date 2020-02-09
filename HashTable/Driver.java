@@ -11,9 +11,11 @@ public class Driver{
 		HashTable ht = new HashTable();
 		makeData(sc,ht);
 		
-		System.out.println("FIND direct nodes of 13");
+		//System.out.println("FIND direct nodes of 13");
 		// need node connections
 		ht.findConnections("13");
+		// how to implement. created an unstable version
+		//ht.BFS("1");
 						
 	}
 	public static void printData() throws FileNotFoundException{
