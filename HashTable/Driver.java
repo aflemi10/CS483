@@ -4,13 +4,31 @@ import java.io.*;
 public class Driver{
 	public static void main(String[] args)
 						throws FileNotFoundException{
+		printData();
 		File file = new File("./Data/graph.txt");
 		Scanner sc = new Scanner(file);
 
-		HashTable ht = new HashTable(15);
+		HashTable ht = new HashTable();
 		makeData(sc,ht);
+		
+		System.out.println("FIND direct nodes of 13");
+		// need node connections
 		ht.findConnections("13");
 						
+	}
+	public static void printData() throws FileNotFoundException{
+		File file = new File("./Data/graph.txt");
+		Scanner sc = new Scanner(file);
+		System.out.println();
+		System.out.println();
+		System.out.println("Data: ");
+		while(sc.hasNextLine()){
+			String line = sc.nextLine();
+			System.out.println(line);
+		}
+		System.out.println("***********************");
+		System.out.println();
+		System.out.println();
 	}
 	public static void makeData(Scanner s, HashTable ht){
 		while(s.hasNextLine()){

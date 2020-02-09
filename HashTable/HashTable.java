@@ -108,12 +108,10 @@ public class HashTable{
 		Entry foundV = null;
 
 		//locate v
-System.out.println("__________________________");
 		Node n = (Node)(obj[key2]); 
 		String nodeString = n.getData();
 		// find v to save into u
 		while(v.compareTo(nodeString) != 0){
-System.out.println("__________________________");
 			n = n.next;
 			nodeString = n.getData();
 		}
